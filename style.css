@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.email-form {
+    padding: 40px;
+    text-align: center;
+}
+
+.email-form h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.email-form p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.email-form input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border: 2px solid #e1e8ed;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.email-form input:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.email-form button, .input-section button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.email-form button:hover, .input-section button:hover {
+    background: #5a6fd8;
+}
+
+.chat-interface {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e1e8ed;
+    background: #f8f9fa;
+}
+
+.client-info h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.status {
+    color: #666;
+    font-size: 14px;
+}
+
+.end-session-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.end-session-btn:hover {
+    background: #c0392b;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f8f9fa;
+}
+
+.message {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 85%;
+}
+
+.bot-message {
+    background: #e8f4fd;
+    border-left: 4px solid #667eea;
+}
+
+.user-message {
+    background: #f0f8e8;
+    border-left: 4px solid #27ae60;
+    margin-left: auto;
+    text-align: right;
+}
+
+.message strong {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-section {
+    display: flex;
+    padding: 20px;
+    background: white;
+    border-top: 1px solid #e1e8ed;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e1e8ed;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.input-section input:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.session-info {
+    padding: 15px 20px;
+    background: #2c3e50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.divider {
+    margin: 0 15px;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e1e8ed;
+    border-top: 2px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        margin: 0;
+    }
+    
+    header {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 24px;
+    }
+    
+    .email-form {
+        padding: 30px 20px;
+    }
+    
+    .message {
+        max-width: 95%;
+    }
+}
