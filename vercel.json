@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "api/chat.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/send-email.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1"
+    }
+  ]
+}
