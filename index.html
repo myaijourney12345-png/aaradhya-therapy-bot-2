@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaradhya - Therapy Training Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapy Training Session</h1>
+            <p>Practice your therapeutic skills with Aaradhya, a 27-year-old client from Jaipur</p>
+        </header>
+
+        <!-- Email Collection Form -->
+        <div id="emailForm" class="email-form">
+            <h2>Before we begin...</h2>
+            <p>Please enter your email to start the session:</p>
+            <input type="email" id="userEmail" placeholder="your.email@example.com" required>
+            <button onclick="startSession()">Start Session</button>
+        </div>
+
+        <!-- Chat Interface -->
+        <div id="chatInterface" class="chat-interface" style="display: none;">
+            <div class="chat-header">
+                <div class="client-info">
+                    <h3>Aaradhya</h3>
+                    <span class="status">Client • Session in progress</span>
+                </div>
+                <button onclick="endSession()" class="end-session-btn">End Session</button>
+            </div>
+
+            <div id="chatMessages" class="chat-messages">
+                <div class="message bot-message">
+                    <strong>Aaradhya:</strong> 
+                    <span>(adjusts dupatta, looks down) Hi... my family said I should come here to talk to someone.</span>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <input type="text" id="messageInput" placeholder="Type your response as the therapist..." 
+                       onkeypress="if(event.key==='Enter') sendMessage()">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+
+            <div class="session-info">
+                <span id="messageCount">Messages: 1</span>
+                <span class="divider">•</span>
+                <span id="sessionTime">00:00</span>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <span>Aaradhya is thinking...</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
